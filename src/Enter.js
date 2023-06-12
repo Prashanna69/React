@@ -1,4 +1,4 @@
-const Enter = ({ colorValue, setColorValue }) => {
+const Enter = ({ colorValue, setColorValue, isDarkText, setIsDarkText }) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input
@@ -9,6 +9,9 @@ const Enter = ({ colorValue, setColorValue }) => {
         value={colorValue}
         onChange={(e) => setColorValue(e.target.value)}
       />
+      <button type="button" onClick={() => setIsDarkText(!isDarkText)}>
+        Text Color
+      </button>
     </form>
   );
 };

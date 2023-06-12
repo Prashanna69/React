@@ -5,10 +5,16 @@ import "./index.css";
 
 function App() {
   const [colorValue, setColorValue] = useState("");
+  const [isDarkText, setIsDarkText] = useState(true);
   return (
     <div className="App">
-      <Sq colorValue={colorValue} />
-      <Enter colorValue={colorValue} setColorValue={setColorValue} />
+      <Sq colorValue={colorValue} isDarkText={isDarkText} />
+      <Enter
+        colorValue={colorValue}
+        setColorValue={setColorValue}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}
+      />
     </div>
   );
 }
